@@ -10,7 +10,7 @@ from slugify import slugify
 pytest_plugins = ["fixtures.fixtures"]
 
 @pytest.hookimpl(hookwrapper=True)
-def attach_artifacts_to_allure_report(item: pytest.Item, call):
+def pytest_runtest_makereport(item: pytest.Item, call):
     """Attach Playwright artifacts to the Allure report.
     """
     outcome = yield
