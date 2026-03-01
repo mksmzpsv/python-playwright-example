@@ -43,6 +43,7 @@ class CustomerTransactionsPage(CustomerBasePage):
     def reset_transactions(self) -> Self:
         self.button_reset.click()
         return self
+
     # TODO: Added this method to handle the flaky behavior of the transactions table not loading transactions after performing a deposit/withdrawal and navigating to the transactions page.
     # Potential issue with the demo app itself. Should be investigated further, and this workaround should be removed if the issue is fixed in the app.
     def reload_transactions_if_table_empty(self, attempts: int = 3) -> Self:
