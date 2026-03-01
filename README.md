@@ -47,7 +47,7 @@ pytest src/tests/customer_tests.py
 
 ### Different Browsers
 
-The default browser is Chromium (configured in `pyproject.toml`). Override with `--browser`:
+The default browser is Chromium (from the default Playwright configuration). Override with `--browser`:
 
 ```sh
 pytest --browser chromium
