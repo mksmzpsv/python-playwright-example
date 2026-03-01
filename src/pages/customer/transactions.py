@@ -49,6 +49,7 @@ class CustomerTransactionsPage(CustomerBasePage):
     def reload_transactions_if_table_empty(self, attempts: int = 3) -> Self:
         remaining_attempts = attempts
         while self.table_transactions.rows.count() == 0 and remaining_attempts > 0:
+            self.page.wait_for_timeout(500)
             self.page.reload()
             self.wait_for_page_load()
             remaining_attempts -= 1
