@@ -19,9 +19,6 @@ def attach_artifacts_to_allure_report(item: pytest.Item, call):
     if report.when == "call":
         item.rep_call = report
 
-    if report.when != "teardown":
-        return
-
     call_report = getattr(item, "rep_call", None)
     if call_report is None:
         return
