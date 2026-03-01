@@ -18,7 +18,6 @@ testpaths = ["src/tests"]
 pythonpath = ["src"]
 python_files = ["*_tests.py"]
 addopts = [
-    "--browser", "chromium",
     "--tracing", "retain-on-failure",
     "--video", "retain-on-failure",
     "--screenshot", "only-on-failure",
