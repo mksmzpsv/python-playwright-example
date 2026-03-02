@@ -50,7 +50,7 @@ def test_customer_makes_withdrawal(
     login_as_specific_customer: CustomerAccountPage,
     page: Page,
 ):
-    customer_name = "Hermoine Granger"
+    customer_name = "Neville Longbottom"
     withdrawal_amount: int = 10
 
     customer_account_page: CustomerAccountPage = login_as_specific_customer(customer_name)
