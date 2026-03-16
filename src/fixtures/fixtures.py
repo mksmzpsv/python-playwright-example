@@ -1,5 +1,3 @@
-from collections.abc import Callable
-
 import pytest
 from playwright.sync_api import Page
 
@@ -22,7 +20,7 @@ def open_select_customer_page(page: Page) -> SelectCustomerPage:
 @pytest.fixture
 def login_as_specific_customer(
     open_select_customer_page: SelectCustomerPage,
-) -> Callable[[str], CustomerAccountPage]:
+) -> CustomerAccountPage:
     def _login_as_customer(customer_name: str) -> CustomerAccountPage:
         customer_selection_page: SelectCustomerPage = open_select_customer_page
         customer_account_page = customer_selection_page.dropdown_customer \
